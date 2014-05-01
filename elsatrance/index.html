@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<title>Elsa Trance</title>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://w.soundcloud.com/player/api.js"></script>
+<script src="script.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" type="image/png" href="favicon.png">
+
+<div class='title'>
+    <h1>Elsa Trance</h1>
+    <div class="right">
+        <p>Made by Uniporn</p>
+        <p>Based on <a href="http://frozen.kuschku.de/annarave">Annarave</a> by Annelsa and Kuschku</p>
+        <p>Also visit us on <a href="http://www.reddit.com/r/Elsanna">#Elsanna</a>!</p>
+    </div>
+</div>
+
+<video class='video' muted="muted" autoplay loop>
+    <source src="res/mq.mp4" type="video/mp4">
+    <source src="res/mq.webm" type="video/webm">
+</video>
+
+<div class="footer">
+    <div class="controls">
+        <button class="button" id='play'>Play/Pause</button>
+        <input  id="volume"  type="range" value="50" name="points" min="0" max="100" />
+        <button class="button" id='scloud'>Show/Hide Playlist</button>
+        <select class="button" id="quality" selected="1">
+            <option value="0">LQ</option>
+            <option value="1">MQ</option>
+            <option value="2">HQ</option>
+        </select>
+    </div>
+    <iframe
+            id="soundcloud_widget"
+            scrolling="no"
+            show_artwork="false"
+            sharing="false"
+            buying="false"
+            frameborder="no"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/31496901&amp;auto_play=true&amp;hide_related=false&amp;visual=true">
+</div>
