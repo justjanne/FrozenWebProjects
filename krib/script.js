@@ -80,7 +80,7 @@ function play(song) {
 }
 
 function initVolume() {
-    var volume = 50;
+    var volume = 10;
     if (getItem("volume") !== null && getItem("volume") !== undefined) {
         volume = getItem("volume");
     }
