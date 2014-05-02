@@ -97,6 +97,10 @@ function init() {
     
     // Load volume from localstorage
     initVolume();
+    
+    forEachOfClass("song", function (entry) {
+        entry.play();
+    });
 }
 
 addListener(window, "load", init);
