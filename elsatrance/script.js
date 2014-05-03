@@ -31,9 +31,9 @@ function speedtest(callback) {
 }
 
 function selectQualityBySpeed(speed) {
-    if (speedMbps < 2) {
+    if (speed < 2) {
         quality = 0;
-    } else if (speedMbps > 8) {
+    } else if (speed > 8) {
         quality = 2;
     }
     updateQuality();
