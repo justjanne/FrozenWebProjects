@@ -8,7 +8,7 @@ var srcList = [
 
 var qualSelector;
 
-function changeQuality() {
+function updateQuality() {
     var video = document.querySelectorAll("video.video")[0];
     var type = video.currentSrc.substr(video.currentSrc.lastIndexOf("."));
     if (type!="mp4" && type != "webm") {
@@ -19,21 +19,25 @@ function changeQuality() {
     document.getElementById("quality").selectedIndex = quality;
 }
 
-function speedtest() {
+function speedtest(callback) {
     var imageAddr = "res/speedtest.png" + "?n=" + Math.random(), startTime, endTime, downloadSize = 20383, download = new Image();
     download.onload = function () {
         endTime = (new Date()).getTime();
         var duration = (endTime - startTime) / 1000, bitsLoaded = downloadSize * 8, speedBps = (bitsLoaded / duration).toFixed(2), speedKbps = (speedBps / 1024).toFixed(2), speedMbps = (speedKbps / 1024).toFixed(2);
-        if (speedMbps < 2) {
-            quality = 0;
-        } else if (speedMbps > 8) {
-            quality = 2;
-        }
-        changeQuality();
+        callback(speedMbps)
     };
     startTime = (new Date()).getTime();
     download.src = imageAddr;
-}   
+}
+
+function selectQualityBySpeed(speed) {
+    if (speedMbps < 2) {
+        quality = 0;
+    } else if (speedMbps > 8) {
+        quality = 2;
+    }
+    updateQuality();
+}
 
 $(document).ready(function () {
     var widget = SC.Widget(document.getElementById('soundcloud_widget'));
@@ -58,6 +62,6 @@ $(document).ready(function () {
     });
     document.getElementById("quality").selectedIndex = 1;
     widget.setVolume(document.getElementById("volume").value);
-    speedtest();
-    changeQuality();
+    speedtest(selectQualityBySpeed);
+    updateQuality();
 });
