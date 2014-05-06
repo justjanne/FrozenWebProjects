@@ -75,7 +75,7 @@ function selectQualityBySpeed(speed) {
 function getSongFromURL() {
     var urlsong = 1;
     urlsong = window.location.hash.substring(1);
-    return urlsong - 1;
+    return (urlsong > 0) ? urlsong - 1 : 1;
 }
 
 // This function is called on init.
