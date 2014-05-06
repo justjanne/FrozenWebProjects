@@ -85,8 +85,8 @@ function init() {
 
     // Execute as soon as widget is loaded
     widget.bind(SC.Widget.Events.READY, function () {
-        widget.skip(getSongFromURL());
         widget.setVolume(document.getElementById("volume").value);
+        widget.skip(getSongFromURL());
     });
 
     // Execute as soon as a song is played
@@ -127,9 +127,6 @@ function init() {
     // Start with medium quality
     document.getElementById("quality").selectedIndex = 1;
     updateQuality();
-
-    // Init volume
-    widget.setVolume(document.getElementById("volume").value);
 
     // Start Speedtest
     speedtest(selectQualityBySpeed);
