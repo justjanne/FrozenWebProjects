@@ -51,7 +51,7 @@ function updateQuality() {
 
 // does a speedtest and calls the callback afterwards with the resulting value in mbps
 function speedtest(callback) {
-    var imageAddr = "res/speedtest.png" + "?n=" + Math.random(), startTime, endTime, downloadSize = 132804, download = new Image();
+    var imageAddr = "res/speedtest.png" + "?n=" + Math.random(), startTime, endTime, downloadSize = 138760, download = new Image();
     download.onload = function () {
         endTime = (new Date()).getTime();
         var duration = (endTime - startTime) / 1000, bitsLoaded = downloadSize * 8, speedBps = (bitsLoaded / duration).toFixed(2), speedKbps = (speedBps / 1024).toFixed(2), speedMbps = (speedKbps / 1024).toFixed(2);
