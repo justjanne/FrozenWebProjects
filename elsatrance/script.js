@@ -92,13 +92,8 @@ function init() {
     });
 
     // Execute as soon as a song is played
-    widget.bind(SC.Widget.Events.PLAY, function () {
-        console.log("PLAY");
-
-        // Set volume back to the selected value
-        widget.getVolume(function (x) {
-            widget.setVolume(document.getElementById("volume").value);
-        });
+    widget.bind(SC.Widget.Events.PLAY_PROGRESS, function () {
+        widget.setVolume(document.getElementById("volume").value);
     });
 
     // Execute as soon as URL changes
