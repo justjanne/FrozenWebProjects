@@ -85,14 +85,20 @@ function init() {
 
     // Execute as soon as widget is loaded
     widget.bind(SC.Widget.Events.READY, function () {
-        widget.setVolume(document.getElementById("volume").value);
+        console.log("READY");
+
         widget.skip(getSongFromURL());
+        widget.setVolume(document.getElementById("volume").value);
     });
 
     // Execute as soon as a song is played
     widget.bind(SC.Widget.Events.PLAY, function () {
+        console.log("PLAY");
+
         // Set volume back to the selected value
-        widget.setVolume(document.getElementById("volume").value);
+        widget.getVolume(function (x) {
+            widget.setVolume(document.getElementById("volume").value);
+        });
     });
 
     // Execute as soon as URL changes
