@@ -53,10 +53,10 @@ function getItem(key) {
 function addListener(object, event, callback) {
     console.log("addListener(" + object + "," + event + "," + callback.name + ");");
 
-    if (window.addEventListener) {
-        window.addEventListener(event, callback, false); //W3C
+    if (object.addEventListener) {
+        object.addEventListener(event, callback, false); //W3C
     } else {
-        window.attachEvent('on' + event, callback); //IE
+        object.attachEvent('on' + event, callback); //IE
     }
 }
 
