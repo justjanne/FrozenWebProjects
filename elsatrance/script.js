@@ -16,8 +16,6 @@ var srcList = [
     "hq"
 ];
 
-var qualSelector;
-
 // Adds a listener independent of browser
 function addListener(object, event, callback) {
     console.log("addListener(" + object + "," + event + "," + callback.name + ");");
@@ -40,6 +38,7 @@ function forEachOfClass(classname, callback) {
     }
 }
 
+// updates the video element based on the quality in the global state
 function updateQuality() {
     var video = document.querySelectorAll("video.video")[0], type = video.currentSrc.substr(video.currentSrc.lastIndexOf("."));
     if (type !== "mp4" && type !== "webm") {
@@ -50,6 +49,7 @@ function updateQuality() {
     document.getElementById("quality").selectedIndex = quality;
 }
 
+// does a speedtest and calls the callback afterwards with the resulting value in mbps
 function speedtest(callback) {
     var imageAddr = "res/speedtest.png" + "?n=" + Math.random(), startTime, endTime, downloadSize = 20383, download = new Image();
     download.onload = function () {
@@ -61,6 +61,7 @@ function speedtest(callback) {
     download.src = imageAddr;
 }
 
+// This function gets the speed in Mbps as input and changes the quality on the video accordingly.
 function selectQualityBySpeed(speed) {
     if (speed < 2) {
         quality = 0;
@@ -70,20 +71,26 @@ function selectQualityBySpeed(speed) {
     updateQuality();
 }
 
-function skipToSong(number) {
-    widget.skip(number);
-}
-
-function getInitialSong() {
+// This takes the URL and returns the first integer after the hash
+function getSongFromURL() {
     var urlsong = 1;
     urlsong = window.location.hash.substring(1);
     return urlsong - 1;
 }
 
+// This function is called on init.
 function init() {
+    // Binding the Soundcloud widget
     widget = SC.Widget(document.getElementById('soundcloud_widget'));
+
+    // Execute as soon as widget is loaded
     widget.bind(SC.Widget.Events.READY, function () {
-        skipToSong(getInitialSong());
+        widget.skip(getSongFromURL());
+    });
+
+    // Execute as soon as URL changes
+    addListener(window, "hashchange", function () {
+        widget.skip(getSongFromURL());
     });
 
     addListener(document.getElementById("play"), "click", function () {
@@ -103,16 +110,21 @@ function init() {
     });
 
     addListener(document.getElementById("quality"), "change", function () {
+        // Stores the selected value into a global variable
         quality = this.value;
+        // Updates the Quality on the object according to the global state
         updateQuality();
     });
 
+    // Start with medium quality
     document.getElementById("quality").selectedIndex = 1;
-    widget.setVolume(document.getElementById("volume").value);
-    speedtest(selectQualityBySpeed);
     updateQuality();
 
-    addListener(window, "hashchange", function () { skipToSong(getInitialSong()); });
+    // Init volume
+    widget.setVolume(document.getElementById("volume").value);
+
+    // Start Speedtest
+    speedtest(selectQualityBySpeed);
 }
 
 addListener(window, "load", init);
