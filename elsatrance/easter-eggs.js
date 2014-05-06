@@ -104,4 +104,5 @@ var Konami = function (callback) {
 	return konami;
 };
 
-var easter_egg = new Konami().easter_egg.load('http://imgur.com/a/HVtF7');
+var easter_egg = new Konami();
+easter_egg.load('http://imgur.com/a/HVtF7');
