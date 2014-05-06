@@ -88,6 +88,12 @@ function init() {
         widget.skip(getSongFromURL());
     });
 
+    // Execute as soon as a song is played
+    widget.bind(SC.Widget.Events.PLAY, function () {
+        // Set volume back to the selected value
+        widget.setVolume(document.getElementById("volume").value);
+    });
+
     // Execute as soon as URL changes
     addListener(window, "hashchange", function () {
         widget.skip(getSongFromURL());
