@@ -1,5 +1,4 @@
 h1 {
-    font-size: 70px;
     font-family: Impact, Charcoal, sans-serif;
     font-weight: 500;
     display: inline-block;
@@ -61,7 +60,7 @@ div.title {
 }
 
 .right {
-    display: inline-block;
+    display: none;
     padding-left: 1rem;
     border-left: 1px solid #fff;
     margin-left: 1rem;
@@ -97,24 +96,25 @@ div.controls {
 .button,.button-primary {
     display: inline-block;
     text-decoration: none;
-    font-size: 13px;
-    line-height: 26px;
-    height: 28px;
+    font-size: .8em;
+    line-height: 1.8em;
+    height: 2em;
     margin: .1rem;
-    padding: 0 10px 1px;
+    padding: .1em .6em;
     cursor: pointer;
     border-width: 1px;
     border-style: solid;
-    -webkit-border-radius: 3px;
+    -webkit-border-radius: .25em;
     -webkit-appearance: none;
     -moz-appearance: none;
     apperance: none;
-    border-radius: 3px;
+    border-radius: .25em;
     white-space: nowrap;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     font-family: sans-serif;
+    vertical-align: middle;
 }
 
 button::-moz-focus-inner, input[type=reset]::-moz-focus-inner, input[type=button]::-moz-focus-inner, input[type=submit]::-moz-focus-inner {
@@ -122,26 +122,6 @@ button::-moz-focus-inner, input[type=reset]::-moz-focus-inner, input[type=button
     border-style: solid none;
     border-color: transparent;
     padding: 0;
-}
-
-.button.button-large, .button-group.button-large .button {
-    height: 30px;
-    line-height: 28px;
-    padding: 0 12px 2px;
-}
-
-.button.button-small, .button-group.button-small .button {
-    height: 24px;
-    line-height: 22px;
-    padding: 0 8px 1px;
-    font-size: 11px;
-}
-
-.button.button-hero, .button-group.button-hero .button {
-    font-size: 14px;
-    height: 46px;
-    line-height: 44px;
-    padding: 0 36px;
 }
 
 .button:active {
@@ -158,7 +138,6 @@ input[type=reset], input[type=reset]:hover, input[type=reset]:active, input[type
     -moz-box-shadow: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    padding: 0 2px 1px;
     width: auto;
 }
 
@@ -168,11 +147,6 @@ input[type=reset], input[type=reset]:hover, input[type=reset]:active, input[type
     background: #f7f7f7;
     -webkit-box-shadow: inset 0 1px 0 #fff,0 1px 0 rgba(0,0,0,.08);
     box-shadow: inset 0 1px 0 #fff,0 1px 0 rgba(0,0,0,.08);
-    vertical-align: top;
-}
-
-p .button {
-    vertical-align: baseline;
 }
 
 .button.hover, .button:hover, .button-secondary:hover, .button.focus, .button:focus, .button-secondary:focus {
@@ -243,4 +217,14 @@ p .button {
     box-shadow: none!important;
     text-shadow: 0 -1px 0 rgba(0,0,0,.1)!important;
     cursor: default;
+}
+
+@media(min-width:60rem) {
+    .title h1{
+        font-size: 70px;
+    }
+    
+    .title .right {
+        display: inline-block;
+    }
 }
