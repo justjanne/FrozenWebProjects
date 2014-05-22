@@ -19,4 +19,4 @@ Authors
 TO-DO
 -----
 
-Update the readme
+* Update the readme
