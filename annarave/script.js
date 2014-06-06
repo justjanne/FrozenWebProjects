@@ -150,7 +150,7 @@ function play(song) {
     // Then change the url accordingly
     window.location.hash = (song + 1).toString();
 
-    if (song == 7) {
+    if (song === 6) {
         selectVideo(1);
     } else {
         selectVideo(0);
