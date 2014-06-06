@@ -136,7 +136,7 @@ function changeVolume() {
 
 // play a specific id
 function play(song) {
-    console.log("play(" + song.toString + ");");
+    console.log("play(" + song.toString() + ");");
     
     if (song >= songs.length) {
         song = 0;
