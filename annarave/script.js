@@ -25,6 +25,27 @@ var songs = [
     {
         "name": "6",
         "url": "http://frozen.kuschku.de/annarave/res/butterfly.mp3"
+    },
+    {
+        "name": "7",
+        "url": "http://frozen.kuschku.de/annarave/res/caramell.mp3"
+    }
+];
+
+var videos = [
+    {
+        "name": "1",
+        "url": {
+            "webm" : "http://frozen.kuschku.de/annarave/res/annarave.webm",
+            "mp4" : "http://frozen.kuschku.de/annarave/res/annarave.mp4"
+        }
+    },
+    {
+        "name": "2",
+        "url": {
+            "webm" : "http://frozen.kuschku.de/annarave/res/caramell.webm",
+            "mp4" : "http://frozen.kuschku.de/annarave/res/caramell.mp4"
+        }
     }
 ];
 
@@ -46,6 +67,15 @@ function getItem(key) {
         console.log(e.name + ":" + e.message);
         return undefined;
     }
+}
+
+function selectVideo(id) {
+    var video = document.querySelectorAll("video.video")[0], type = video.currentSrc.substr(video.currentSrc.lastIndexOf("."));
+    if (type !== "mp4" && type !== "webm") {
+        type = "webm";
+    }
+    video.src = videos[id].url[type];
+    video.play();
 }
 
     
@@ -119,6 +149,12 @@ function play(song) {
     document.getElementById(song.toString()).play();
     // Then change the url accordingly
     window.location.hash = (song + 1).toString();
+
+    if (song == 7) {
+        selectVideo(2);
+    } else {
+        selectVideo(1);
+    }
 }
 
 // This creates the buttons and the audio elements for our songs
