@@ -151,9 +151,9 @@ function play(song) {
     window.location.hash = (song + 1).toString();
 
     if (song == 7) {
-        selectVideo(2);
-    } else {
         selectVideo(1);
+    } else {
+        selectVideo(0);
     }
 }
 
