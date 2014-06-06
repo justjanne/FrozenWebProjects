@@ -70,7 +70,7 @@ function getItem(key) {
 }
 
 function selectVideo(id) {
-    var video = document.querySelectorAll("video.video")[0], type = video.currentSrc.substr(video.currentSrc.lastIndexOf("."));
+    var video = document.querySelectorAll("#video")[0], type = video.currentSrc.substr(video.currentSrc.lastIndexOf("."));
     if (type !== "mp4" && type !== "webm") {
         type = "webm";
     }
