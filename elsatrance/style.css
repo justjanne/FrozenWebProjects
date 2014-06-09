@@ -221,7 +221,7 @@ input[type=reset], input[type=reset]:hover, input[type=reset]:active, input[type
 
 @media(min-width:60rem) {
     .title h1{
-        font-size: 70px;
+        font-size: 60px;
     }
     
     .title .right {
