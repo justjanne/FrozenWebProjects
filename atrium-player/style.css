@@ -49,7 +49,7 @@ td:first-child {
     width: 2.4rem;
 }
 
-td:last-child {
+td:last-child, th:last-child {
     text-align: right;
     padding: 0 .4rem;
 }
