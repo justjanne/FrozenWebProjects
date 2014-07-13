@@ -143,11 +143,6 @@ var songs = [{
     duration: "251"
 }, {
     date: "1301",
-    title: "Dj A-Style Mix Januar",
-    url: "39f3c32877a63043b6f0afe1f4f632a3",
-    duration: "221"
-}, {
-    date: "1301",
     title: "Dj A-Style Mix",
     url: "c40c638a64c31e45f08f6d41ab76f519",
     duration: "227"
