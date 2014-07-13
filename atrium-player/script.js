@@ -118,19 +118,9 @@ var songs = [{
     duration: "480"
 }, {
     date: "1304",
-    title: "J LuKi Mix April 12",
-    url: "36ac207799fa6186bd6bfd0540c77157",
-    duration: "257"
-}, {
-    date: "1304",
     title: "Dj A-Style Mix April",
     url: "9b48add9348a0a08c6f3a7b912977d2e",
     duration: "290"
-}, {
-    date: "1304",
-    title: "ChrizzD. Mix April 12",
-    url: "7de7a6006e1b30d3466fbfd884290973",
-    duration: "360"
 }, {
     date: "1303",
     title: "ChrizzD. Mix März",
@@ -266,6 +256,16 @@ var songs = [{
     title: "Bring Em Out",
     date: "1205",
     duration: "216"
+}, {
+    date: "1204",
+    title: "J LuKi Mix April 12",
+    url: "36ac207799fa6186bd6bfd0540c77157",
+    duration: "257"
+}, {
+    date: "1204",
+    title: "ChrizzD. Mix April 12",
+    url: "7de7a6006e1b30d3466fbfd884290973",
+    duration: "360"
 }, {
     url: "34d7a007248a631e48c8b5b6cc047e8e",
     title: "Turn All The Lights On",
