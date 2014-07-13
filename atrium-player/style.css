@@ -1,0 +1,79 @@
+@import url(http://fonts.googleapis.com/css?family=RobotoDraft:400,300,700&subset=latin,latin-ext);
+
+body {
+    background-color: hsl(0, 0%, 90%);
+    margin: 0;
+    font-family: "RobotoDraft";
+}
+
+table {
+    cursor: pointer;
+    border-spacing: 0px;
+    width: 100%;
+    max-width: 40rem;
+    margin: 3rem auto 5rem;
+}
+
+th {
+    height: 36px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    color: hsl(0, 0%, 20%);
+    text-indent: 8px;
+    padding: 0px;
+    border-bottom: 1px solid hsl(240, 2%, 80%);
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+td {
+    height: 40px;
+    line-height: 40px;
+    max-height: 40px;
+    min-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 8px;
+    padding: 0px;
+    cursor: pointer;
+    color: hsl(0, 0%, 44%);
+    border-bottom: 1px solid hsl(0, 0%, 85%);
+    font-size: 14px;
+    background-color: hsl(0, 0%, 90%);
+    font-weight: normal;
+}
+
+td:first-child {
+    width: 2.4rem;
+}
+
+td:last-child {
+    text-align: right;
+    padding: 0 .4rem;
+}
+
+tr:hover td, tr:focus td {
+    background-color: hsl(0, 0%, 95%);
+}
+
+.selected td {
+    background-color: hsl(0, 0%, 100%) !important;
+}
+
+.selected td:first-child {
+    background-image: url(res/ani_equalizer_black.gif);
+}
+
+#controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#player {
+    display: block;
+    width: 100%;
+}
