@@ -270,4 +270,4 @@ var Konami = function (callback) {
 };
 
 var easter_egg = new Konami();
-easter_egg.load('http://imgur.com/a/HVtF7');
+easter_egg.load('http://imgur.com/a/YpfKn');
