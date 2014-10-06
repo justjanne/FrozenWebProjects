@@ -3,6 +3,48 @@
 // Here we can specify all available songs
 var songs = [
     {
+        url: "3565aa4967956062d27d51d5c36e454f",
+        title: "Dj Tibby Mix 09/14",
+        date: "1409",
+        duration: "246"
+    },
+    {
+        url: "0345020f4839dc17dc5baa7cdc48015e",
+        title: "Dj A-Style Mix 09/2014",
+        date: "1409",
+        duration: "289"
+    },
+    {
+        url: "1ec70e57a2e4813a687ef333b17d0445",
+        title: "Dj Double-B Mix 09/14",
+        date: "1409",
+        duration: "344"
+    },
+    {
+        url: "2051f5832cdbb0e4c7eba2db12e3bc2c",
+        title: "KICK ME BACK",
+        date: "1408",
+        duration: "49"
+    },
+    {
+        url: "8d451cab7555b4de582badccd88ff446",
+        title: "Dj MAXX Mix 08/14",
+        date: "1408",
+        duration: "520"
+    },
+    {
+        url: "5296847a6075acd693d298bd5e51574d",
+        title: "Dj TIBBY Mix 08/14",
+        date: "1408",
+        duration: "373"
+    },
+    {
+        url: "d3d00973137115957df48fe99af3f503",
+        title: "Dj Double-B Mix 08/14",
+        date: "1408",
+        duration: "244"
+    },
+    {
         url: "c6c7b78f9e391986a1f096d3711d953a",
         title: "Dj Double-B Mix 06/14",
         date: "1406",
