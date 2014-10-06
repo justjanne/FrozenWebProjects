@@ -21,12 +21,6 @@ var songs = [
         duration: "344"
     },
     {
-        url: "2051f5832cdbb0e4c7eba2db12e3bc2c",
-        title: "KICK ME BACK",
-        date: "1408",
-        duration: "49"
-    },
-    {
         url: "8d451cab7555b4de582badccd88ff446",
         title: "Dj MAXX Mix 08/14",
         date: "1408",
