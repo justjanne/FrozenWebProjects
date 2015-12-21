@@ -3,6 +3,48 @@
 // Here we can specify all available songs
 var songs = [
     {
+        url: "5c2fae0ff1a0a1088ab5959b65eb7a4e",
+        title: "07.11.15 live -> KC Rebell",
+        date: "1511",
+        duration: "179"
+    },
+    {
+        url: "7cbf4c2409a2b084bbeaf6845e0d5c97",
+        title: "Dj Marques Mix 08/15",
+        date: "1508",
+        duration: "378"
+    },
+    {
+        url: "d19dc9e232c77cc7d1a51d6b4df2aa3b",
+        title: "Dj Tibby Mix 12/14",
+        date: "1412",
+        duration: "312"
+    },
+    {
+        url: "a27ddbe1d498ae6589a758d1ab17bab8",
+        title: "Dj Tibby Mix 11/14",
+        date: "1411",
+        duration: "256"
+    },
+    {
+        url: "8e32be3d24c069bd3a40f828e2a5744b",
+        title: "Dj Marques Mix 11/2014",
+        date: "1411",
+        duration: "400"
+    },
+    {
+        url: "238f003389e75db055fb79ce01841790",
+        title: "Dj A-Style Mix 11/2014",
+        date: "1411",
+        duration: "373"
+    },
+    {
+        url: "202fbc90ca37cbe33fcfdb2147bb8b73",
+        title: "Dj MAXX Mix 11/14",
+        date: "1411",
+        duration: "366"
+    },
+    {
         url: "3565aa4967956062d27d51d5c36e454f",
         title: "Dj Tibby Mix 09/14",
         date: "1409",
