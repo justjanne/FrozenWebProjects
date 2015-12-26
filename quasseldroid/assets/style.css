@@ -1,0 +1,101 @@
+.following.bar {
+    position: fixed;
+    top: 0px;
+    z-index: 900;
+    left: 0%;
+    padding: 2em 0em;
+    width: 100%;
+    box-shadow: 0px 0px 0px 0px transparent;
+    border-bottom: 1px solid transparent;
+    transition: padding 0.5s ease, background 0.5s ease, box-shadow 0.5s ease, border 0.5s ease;
+}
+
+.ui.logo {
+  max-width: 1.6rem;
+  max-height: 1.6rem;
+  margin-right: 0.4rem;
+}
+
+.secondary.menu .item {
+  line-height: 1.6rem;
+}
+
+.secondary.menu .item > i.icon {
+  height: 1.6rem;
+}
+
+.following.bar {
+  padding: 1em 0;
+}
+
+.following.bar.qd {
+  background: #0271B3;
+}
+
+.masthead {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  padding: 0em;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0px;
+  border-bottom: none;
+
+  background-color: #000000;
+  background-position: center center;
+  background-image: url("smartphone-friends-internet-connection_web.jpg");
+  background-size: cover;
+}
+.introduction h1.header {
+  font-size: 4.5rem;
+}
+
+.introduction {
+  perspective: 500px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.masthead .container {
+  height: 55vh;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  min-height: 600px;
+  
+  padding: 15rem 0em;
+}
+
+.pusher .stripe {
+    padding: 10rem 0px;
+    border-radius: 0rem;
+    margin: 0rem;
+}
+
+.ui.header {
+    font-weight: normal;
+}
+
+.pusher .stripe h1 {
+    font-size: 40px;
+}
+
+.pusher .intro.segment h1 + p {
+    font-size: 22px;
+}
+
+@media(max-width:500px) {
+  .ui.menu .item > span.text {
+    display: none;
+  }
+  
+  .ui.menu .item > i.icon {
+    margin-right: 0;
+  }
+  
+  .introduction h1.header {
+    font-size: 3rem;
+  }
+  
+  .introduction h2 {
+    font-size: 1.4rem;
+  }
+}

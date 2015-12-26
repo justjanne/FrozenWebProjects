@@ -1,0 +1,82 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="HandheldFriendly" content="True")
+    meta(name="referrer" content="origin")
+    
+    title=pageTitle
+    meta(name="description" content=pageDescription)
+    link(rel="shortcut icon" href=pageIcon)
+    link(rel="canonical" href=pageUrl)
+    
+    meta(property="og:site_name" content=pageTitle)
+    meta(property="og:type" content="website")
+    meta(property="og:title" content=pageTitle)
+    meta(property="og:description" content=pageDescription)
+    meta(property="og:url" content=pageUrl)
+    meta(property="og:image" content=pageThumb)
+    
+    meta(property="twitter:card" content="summary_large_image")
+    meta(property="twitter:title" content=pageTitle)
+    meta(property="twitter:description" content=pageDescription)
+    meta(property="twitter:url" content=pageUrl)
+    meta(property="twitter:image:src" content=pageThumb)
+    
+    meta(name="generator" content="Human v1.2.687")
+    
+    link(rel="stylesheet" href="semantic/semantic.min.css")
+    link(rel="stylesheet" href="assets/style.css")
+  body#page-index
+    .pusher
+      .full.height
+        .following.bar
+          .ui.container
+            .ui.large.secondary.menu.inverted
+              a.view-ui.item.active
+                img.ui.logo.left(src="https://dl.kuschku.de/demo/quassel/img/icon.png")
+                | QuasselDroid
+              a.view-ui.item(href="blog/")
+                | Blog
+              .right.menu
+                a.view-ui.item(href="https://github.com/sandsmark/QuasselDroid")
+                  i.icon.github.left
+                  span.text.
+                    GitHub
+                a.view-ui.item(href="releases/")
+                  i.icon.download.left
+                  span.text.
+                    Download
+        .masthead.segment
+          .ui.container
+            .introduction
+              h1.ui.inverted.header.
+                QuasselDroid
+              h2.ui.inverted.
+                Chat comfortably, everywhere
+              .ui.hidden.divider
+              a.ui.huge.inverted.download.button(href="releases/")
+                span.text.
+                  Download
+                i.icon.download.right
+              a.ui.huge.inverted.basic.button(href="https://github.com/sandsmark/QuasselDroid")
+                span.text.
+                  GitHub
+                i.icon.github.right
+        .ui.vertical.stripe.intro.segment
+          .ui.stackable.very.relaxed.center.aligned.grid.container
+            .row
+              .twelve.wide.column
+                img.ui.fluid.image(src="assets/devices.png")
+                h1.ui.header.
+                  Stay connected from every device –<br>never miss a message again
+                p.
+                  QuasselDroid is a pure-java client for the Quassel core, allowing <br>
+                  you to connect to your Quassel core using your Android (TM) phone.  
+    script(src="https://code.jquery.com/jquery-1.11.3.min.js")
+    script(src="semantic/semantic.min.js")
+    script(src="assets/script.js")
+    
+<!-- http://kaboompics.com/one_foto/618/cell-phone-in-hands -->
