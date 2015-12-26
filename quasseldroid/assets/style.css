@@ -50,6 +50,44 @@
   font-size: 4.5rem;
 }
 
+.pusher .stripe h2 {
+    font-size: 26px;
+}
+
+.pusher .stripe .grid .row {
+  margin: 2rem 0rem;
+}
+
+.pusher .stripe .column > p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 1em 0em;
+}
+
+.pusher .alternate.stripe {
+    background-color: #F2F3F5;
+}
+
+.vertical.segment {
+    box-shadow: none;
+}
+.pusher > .footer {
+    padding-left: 0em;
+    clear: both;
+    margin: 0em;
+    border-radius: 0em;
+    padding: 4em 0em 4em 0em;
+}
+
+.pusher > .footer .grid {
+  display: block;
+}
+
+.pusher > .footer .grid .column {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
 .introduction {
   perspective: 500px;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
