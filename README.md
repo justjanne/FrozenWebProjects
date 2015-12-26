@@ -1,7 +1,7 @@
-FrozenWebProjects
+JWebProjects
 =================
 
-This is a repository containing several web projects related to the 2013 Disney Movie "Frozen".
+This is a repository containing several web projects of mine
 
 Projects
 --------
@@ -13,10 +13,4 @@ Projects
 Authors
 -------
 
-* Uniporn
 * kuschku
-
-TO-DO
------
-
-* Update the readme
