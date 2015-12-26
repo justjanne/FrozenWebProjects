@@ -88,18 +88,18 @@ function init() {
         console.log("READY");
 
         widget.skip(getSongFromURL());
-        widget.setVolume(document.getElementById("volume").value);
+        widget.setVolume(document.getElementById("volume").value*0.01);
     });
 
     // Execute as soon as a song is played
     widget.bind(SC.Widget.Events.PLAY_PROGRESS, function () {
-        widget.setVolume(document.getElementById("volume").value);
+        widget.setVolume(document.getElementById("volume").value*0.01);
     });
 
     // Execute as soon as URL changes
     addListener(window, "hashchange", function () {
         widget.skip(getSongFromURL());
-        widget.setVolume(document.getElementById("volume").value);
+        widget.setVolume(document.getElementById("volume").value*0.01);
     });
 
     addListener(document.getElementById("play"), "click", function () {
@@ -107,11 +107,11 @@ function init() {
     });
 
     addListener(document.getElementById("volume"), "click", function () {
-        widget.setVolume(document.getElementById("volume").value);
+        widget.setVolume(document.getElementById("volume").value*0.01);
     });
 
     addListener(document.getElementById("volume"), "change", function () {
-        widget.setVolume(document.getElementById("volume").value);
+        widget.setVolume(document.getElementById("volume").value*0.01);
     });
 
     addListener(document.getElementById("scloud"), "click", function () {

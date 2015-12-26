@@ -2,6 +2,7 @@ h1 {
     font-family: Impact, Charcoal, sans-serif;
     font-weight: 500;
     display: inline-block;
+    text-transform: uppercase;
 }
 
 * {
@@ -64,7 +65,7 @@ div.title {
     padding-left: 1rem;
     border-left: 1px solid #fff;
     margin-left: 1rem;
-    vertical-align: baseline;
+    vertical-align: 2pt;
 }
 
 body {
@@ -221,7 +222,7 @@ input[type=reset], input[type=reset]:hover, input[type=reset]:active, input[type
 
 @media(min-width:60rem) {
     .title h1{
-        font-size: 60px;
+        font-size: 40px;
     }
     
     .title .right {

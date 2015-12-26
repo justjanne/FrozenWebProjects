@@ -4,31 +4,31 @@
 var songs = [
     {
         "name": "1",
-        "url": "http://frozen.kuschku.de/annarave/res/fysb.mp3"
+        "url": "http://projects.kuschku.de/annarave/res/fysb.mp3"
     },
     {
         "name": "2",
-        "url": "http://frozen.kuschku.de/annarave/res/lig.mp3"
+        "url": "http://projects.kuschku.de/annarave/res/lig.mp3"
     },
     {
         "name": "3",
-        "url": "http://frozen.kuschku.de/annarave/res/harlemshake.mp3"
+        "url": "http://projects.kuschku.de/annarave/res/harlemshake.mp3"
     },
     {
         "name": "4",
-        "url": "http://frozen.kuschku.de/annarave/res/giraffes.mp3"
+        "url": "http://projects.kuschku.de/annarave/res/giraffes.mp3"
     },
     {
         "name": "5",
-        "url": "http://frozen.kuschku.de/annarave/res/atomicink.mp3"
+        "url": "http://projects.kuschku.de/annarave/res/atomicink.mp3"
     },
     {
         "name": "6",
-        "url": "http://frozen.kuschku.de/annarave/res/butterfly.mp3"
+        "url": "http://projects.kuschku.de/annarave/res/butterfly.mp3"
     },
     {
         "name": "7",
-        "url": "http://frozen.kuschku.de/annarave/res/caramell.mp3"
+        "url": "http://projects.kuschku.de/annarave/res/caramell.mp3"
     }
 ];
 
@@ -36,15 +36,15 @@ var videos = [
     {
         "name": "1",
         "url": {
-            "webm" : "http://frozen.kuschku.de/annarave/res/annarave.webm",
-            "mp4" : "http://frozen.kuschku.de/annarave/res/annarave.mp4"
+            "webm" : "http://projects.kuschku.de/annarave/res/annarave.webm",
+            "mp4" : "http://projects.kuschku.de/annarave/res/annarave.mp4"
         }
     },
     {
         "name": "2",
         "url": {
-            "webm" : "http://frozen.kuschku.de/annarave/res/caramell.webm",
-            "mp4" : "http://frozen.kuschku.de/annarave/res/caramell.mp4"
+            "webm" : "http://projects.kuschku.de/annarave/res/caramell.webm",
+            "mp4" : "http://projects.kuschku.de/annarave/res/caramell.mp4"
         }
     }
 ];
