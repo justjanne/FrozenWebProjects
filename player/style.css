@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    cursor: default;
+}
+
+:not(.jksubtitledisplay *) {
+    font-size: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+}
+
+#jkvideo {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+    
+#jkcontainer {
+    position: relative;
+    background: #000;
+    width: 100%;
+    height: 100%;
+}
+
+#jkcontainer[nopointer] {
+    cursor: none;
+}
+
+#jkvolumewrapper {
+    height: 90px;
+    width: 30px;
+    display: block;
+    position: absolute;
+    top: -91px;
+    box-shadow: 0px 1px 0px 0px #49494B inset, 0px 0px 0px 1px rgba(21, 21, 23, 0.87);
+    background-color: #3F3F41;
+    background-image: linear-gradient(#3F3F41 0%, #343437 100%);
+    border-radius: 3px;
+    transition: opacity 400ms ease 0s;
+    opacity: 0;
+}
+
+#jkvolume {
+    width: 30px;
+    height: 30px;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 24px 24px;
+    cursor: pointer;
+    
+    background-image: url(res/volume-off.svg);
+}
+
+#jkvolume[data-status="off"] {
+    background-image: url(res/volume-off.svg);
+}
+#jkvolume[data-status="min"] {
+    background-image: url(res/volume-low.svg);
+}
+#jkvolume[data-status="mid"] {
+    background-image: url(res/volume-medium.svg);
+}
+#jkvolume[data-status="max"] {
+    background-image: url(res/volume-high.svg);
+}
+
+#jkvolumebar {
+    position: absolute;
+    left: 11px;
+    right: 11px;
+    width: 8px;
+    top: 11px;
+    bottom: 11px;
+    border-radius: 8px;
+    background-image: linear-gradient(#202022 0%, #252527 100%);
+    box-shadow: inset 0 1px 1px #1c1c1e,
+        0 0 0 1px rgba(21, 21, 23, .87);
+    cursor: pointer;
+}
+
+#jkvolumeprogress {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    width: 8px;
+    border-radius: 8px;
+    background-image: linear-gradient(#ffffff 0%, #acacac 100%);
+    height: 0%;
+}
+
+#jkvolumeseeker {
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    font-size: 0;
+    margin-left: -3px;
+    margin-top: 8px;
+    margin-bottom: -8px;
+    z-index: 40;
+    border: 1px solid rgba(0,0,0,.5);
+    box-shadow: inset 0 1px 0 #fff;
+    background: #d6d6d6;
+    bottom: 0%;
+    cursor: pointer;
+}
+
+#jkstatus-icon {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -25px -35px;
+    height: 50px;
+    width: 70px;
+    box-shadow: inset 0 1px 0 0 #49494b,
+        0 0 0 1px rgba(21, 21, 23, .87);
+    background-color: #3f3f41;
+    background-image: linear-gradient(#3f3f41 0%, #343437 100%);
+    border-radius: 3px;
+    transition: 400ms opacity;
+    z-index: 30;
+    
+    cursor: pointer;
+    
+    visibility: hidden;
+}
+
+#jkstatus-icon[data-status=pause], #jkstatus-icon[data-status=buffer] {
+    visibility: visible;
+}
+
+#jkstatus-icon div {
+    width: 100%;
+    height: 100%;
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#jkstatus-icon[data-status=pause] div {
+    background-image: url(res/play.svg);
+    background-size: 48px 48px;
+}
+
+#jkstatus-icon[data-status=buffer] div {
+    background-image: url(res/loader.gif);
+    background-size: 36px 36px;
+}
+
+#jkcontrols {
+    box-sizing: border-box;
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    height: 30px;
+    transition: 400ms opacity;
+    z-index: 30;
+}
+
+#jkcontrolwrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+        box-shadow: inset 0 1px 0 0 #49494b,
+        0 0 0 1px rgba(21, 21, 23, .87);
+    background-color: #3f3f41;
+    background-image: linear-gradient(#3f3f41 0%, #343437 100%);
+    border-radius: 3px;
+    max-width: 960px;
+}
+
+#jkplay {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px 20px;
+    cursor: pointer;
+    
+    background-image: url(res/play.svg);
+}
+
+#jkplay[data-status="pause"] {
+    background-image: url(res/play.svg);
+}
+
+#jkplay[data-status="play"] {
+    background-image: url(res/pause.svg);
+}
+
+#jkmax {
+    width: 30px;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 20px 20px;
+    cursor: pointer;
+}
+
+#jkmax[data-status="expanded"] {
+    background-image: url(res/collapse.svg);
+}
+
+#jkmax[data-status="collapsed"] {
+    background-image: url(res/expand.svg);
+}
+
+#jkcc {
+    width: 30px;
+    height: 30px;
+    background-image: url(res/closed-caption.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+}
+
+#jkcc[data-status="on"] {
+    opacity: 1;
+}
+
+#jkcc[data-status="off"] {
+    opacity: 0.4;
+}
+
+#jkcc[data-status="none"] {
+    display: none;
+}
+
+#jkprogresswrapper {
+    flex-grow: 1;
+    width: auto;
+    position: relative;
+    margin: 0 4px;
+}
+
+#jkprogressbar {
+    position: absolute;
+    top: 11px;
+    bottom: 11px;
+    height: 8px;
+    left: 4px;
+    right: 4px;
+    border-radius: 8px;
+    background-image: linear-gradient(#202022 0%, #252527 100%);
+    box-shadow: inset 0 1px 1px #1c1c1e,
+        0 0 0 1px rgba(21, 21, 23, .87);
+    cursor: pointer;
+}
+
+#jkprogress {
+    position: absolute;
+    display: block;
+    height: 8px;
+    border-radius: 8px;
+    background-image: linear-gradient(#ffffff 0%, #acacac 100%);
+    width: 0%;
+}
+
+#jkbuffered {
+    position: absolute;
+    display: block;
+    height: 8px;
+    border-radius: 8px;
+    background-color: rgba(0,0,0,.4);
+    width: 0%;
+}
+
+#jkseeker {
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    font-size: 0;
+    margin-top: -3px;
+    margin-bottom: 8px;
+    margin-left: -8px;
+    z-index: 40;
+    border: 1px solid rgba(0,0,0,.5);
+    box-shadow: inset 0 1px 0 #fff;
+    background: #d6d6d6;
+    left: 0%;
+    cursor: pointer;
+}
+
+#jktime {
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    line-height: 30px;
+    font-size: 12px;
+    padding: 0px 4px;
+}
+
+#jksubtitles {
+    position: absolute;
+    bottom: 46px;
+    width: 100%;
+    z-index: 20;
+    text-align: center;
+}
+
+#jksubtitles p {
+    display: inline-block;
+    margin: 2vh auto;
+    text-rendering: geometricPrecision;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: rgba(255,255,255,0.99);
+    transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg);
+    font-family: Arial, sans-serif;
+    font-size: 36pt;
+    text-shadow:  0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 2px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000, 0 0 1px #000,
+        .06em .06em 0 rgba(0,0,0,0.4);
+}

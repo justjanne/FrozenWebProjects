@@ -6,8 +6,13 @@
     top_bar_bg($(document).scrollTop() * 1.0 / ($(".masthead").height()-$(".following.bar").height()));
   };
   
+ 
+  var position_top_bar = function () {
+    $(".following.bar").toggleClass("qd", $(document).scrollTop() != 0);
+  };
+  
   $(document).ready(function() {
-    $(document).scroll(update_top_bar);
-    update_top_bar();
+    $(document).scroll(position_top_bar);
+    position_top_bar();
   });
 })();
