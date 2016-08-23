@@ -3,6 +3,102 @@
 // Here we can specify all available songs
 var songs = [
     {
+        url: "842f2a113bcca03a76674ca671f658c2",
+        title: "Dj Baxi Mit 01/16",
+        date: "1601",
+        duration: "482"
+    },
+    {
+        url: "f04eb1146544fdf786fe23255f338e20",
+        title: "Dj Baxi Mix 11/15",
+        date: "1511",
+        duration: "331"
+    },
+    {
+        url: "a08abf2dcbc3d9921f9adabf24e7f463",
+        title: "Dj ChrizzD Mix 11/15",
+        date: "1511",
+        duration: "480"
+    },
+    {
+        url: "8c589530ba327aabee63597a6e593e9a",
+        title: "Geiles Leben",
+        date: "1511",
+        duration: "212"
+    },
+    {
+        url: "ea7284b51751fb16b547d4c0c4bc5a36",
+        title: "Dj A-Style Mix 09/15",
+        date: "1509",
+        duration: "318"
+    },
+    {
+        url: "6c8068aa69b460746a0e1d5e0f708fb4",
+        title: "Dj Marques Mix 09/15",
+        date: "1509",
+        duration: "380"
+    },
+    {
+        url: "613c26a65142e3ddcc467492543c4332",
+        title: "Chris Brown - Five More Hours",
+        date: "1507",
+        duration: "210"
+    },
+    {
+        url: "4b73ecd627515ab391257e3d2c50e281",
+        title: "Dj Marques Mix 06/2015",
+        date: "1506",
+        duration: "344"
+    },
+    {
+        url: "c24ebbd64440ae6066c877bb98fd0553",
+        title: "Dj A-Style Mix 05/2015",
+        date: "1505",
+        duration: "297"
+    },
+    {
+        url: "72fe79b8bb970821f589302b89e28c72",
+        title: "Dj Marques Mix 04/2015",
+        date: "1504",
+        duration: "413"
+    },
+    {
+        url: "f1396af5d2c23ee1635702b73bf938a5",
+        title: "Dj A-Style Mix 03/2015",
+        date: "1503",
+        duration: "245"
+    },
+    {
+        url: "d7671ab0f82898b437eb9145ee7ea545",
+        title: "Dj Marques Mix 03/2015",
+        date: "1503",
+        duration: "395"
+    },
+    {
+        url: "e052c11ad67e36dabf043350d358a8b2",
+        title: "Dj A-Style Mix 02/2015",
+        date: "1502",
+        duration: "242"
+    },
+    {
+        url: "aaa4ada382d68585cfc343e70acb73f8",
+        title: "Dj Double B Mix 02/2015",
+        date: "1502",
+        duration: "352"
+    },
+    {
+        url: "4b6f77406fef840bc5a50d405b995ceb",
+        title: "Dj Marques Mix 02/2015",
+        date: "1502",
+        duration: "375"
+    },
+    {
+        url: "fdacbe03c87b032cee84fbcc6c3c0af2",
+        title: "Dj Tibby Mix 02/15",
+        date: "1502",
+        duration: "327"
+    },
+    {
         url: "5c2fae0ff1a0a1088ab5959b65eb7a4e",
         title: "07.11.15 live -> KC Rebell",
         date: "1511",
